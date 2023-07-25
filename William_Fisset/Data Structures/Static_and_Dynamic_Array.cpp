@@ -15,7 +15,7 @@ class DynamicArray {
     private:
         int len = 0; // Length the user thinks the array is
         int capacity = 0; // Actual size of the array
-        T arr[];
+        T arr[16];
     public:
         DynamicArray() { DynamicArray(16); } // Default constructor
         DynamicArray(int capacity) {
