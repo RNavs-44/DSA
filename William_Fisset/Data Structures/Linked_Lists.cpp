@@ -14,6 +14,7 @@ template <typename T>
 class DoublyLinkedList {
     private:
         template <typename U>
+        // internal node class to represent data
         class Node {
             public:
                 T data;
@@ -43,6 +44,7 @@ class DoublyLinkedList {
         }
         
     public:
+        // empty linked list, O(n)
         void clear() {
             Node <T>* trav = head;
             while (trav != nullptr) {
@@ -54,14 +56,19 @@ class DoublyLinkedList {
             head = tail = trav = nullptr;
             size = 0;
         }
+
+        // return size of linked list
         int size() { return this->len; }
 
+        // is linked list empty?
         bool isEmpty() { return size() == 0; }
 
+        // add an element to tail of linked list, O(1)
         void add(const T &elem) {
             addLast(elem);
         }
 
+        // add an element to beginning of linked list, O(1)
         void addFirst(const T &elem) {
             if (isEmpty()) { head = tail = new Node <T>( elem, nullptr, nullptr ); }
             else {
@@ -71,6 +78,7 @@ class DoublyLinkedList {
             len++;
         }
 
+        // 
         void addLast(const T &elem) {
             if (isEmpty()) { head = tail = new Node ( elem, nullptr, nullptr ); }
             else {

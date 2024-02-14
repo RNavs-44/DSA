@@ -1,3 +1,8 @@
+/*
+Input: 2 numbers r1 and s, where s is mean of r2 and r2
+Output: r2
+*/
+
 #include <stdio.h>
 
 int main() {

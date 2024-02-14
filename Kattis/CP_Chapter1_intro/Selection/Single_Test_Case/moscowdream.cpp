@@ -1,3 +1,13 @@
+/*
+Requirements:
+Consists of exactly n problems, has at least 1 easy, medium and hard problem
+
+Input:
+The input contains 4 integers a, b, c, n
+a easy problems, b medium problems and c hard problems
+
+Output
+Print ‘YES’ if it is possible to create a problemset satisfying above requirements, and ‘NO’ otherwise.*/
 #include <stdio.h>
 
 int main() {
